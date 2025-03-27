@@ -9,3 +9,13 @@
 # pop - Apaga um item com a chave especificada (del)
 # popitem - Apaga o último item adicionado
 # update - Atualiza um dicionário com outro
+
+pessoa = {
+    'nome': 'Dennis',
+    'sobrenome': 'Guimaraes',
+}
+
+print(list(pessoa.items()))
+
+for chave, valor in pessoa.items():
+    print(chave, valor)
