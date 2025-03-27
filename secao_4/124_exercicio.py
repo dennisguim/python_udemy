@@ -12,7 +12,7 @@ perguntas = [
     {
         'Pergunta': 'Quanto é 10 % 2:',
         'Opções': ['4', '7', '3', '5'],
-        'Reposta': '5',
+        'Resposta': '5',
     }
 ]
 
@@ -21,7 +21,7 @@ n = 0
 contador = qtd_chaves - n
 i = 0
 
-while contador != 1:
+while contador != 0:
     lista_chaves = list(perguntas[i].keys())
     qtd_opcoes = len(perguntas[i]['Opções'])
     lista1 = list(perguntas[i]['Opções'])
@@ -45,11 +45,12 @@ while contador != 1:
     print("\n" "Resposta errada!" if resp_lista != perguntas[i]['Resposta'] else "\n" "Correto")
     i += 1
     n += 1
-
+else:
+    print('Terminou')
 
     """ lista_chaves = list(perguntas[1].keys())
     qtd_opcoes = len(perguntas[1]['Opções'])
-    lista1 = list(perguntas[1]['Opções'])
+    lista1 = list(perguntas[1]['Opções'])1
 
     print("\n",
         perguntas[1]['Pergunta'],'\n','\n',
