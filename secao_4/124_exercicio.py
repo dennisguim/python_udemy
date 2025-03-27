@@ -15,3 +15,13 @@ perguntas = [
         'Reposta': '5',
     }
 ]
+
+while True:
+    lista_chaves = list(perguntas[0].keys())
+    print(perguntas[0]['Pergunta'],'\n', '\n',
+          lista_chaves[1]
+          )
+
+
+
+    resp = input('Escolha uma opção: ')
