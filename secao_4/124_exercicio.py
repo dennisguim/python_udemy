@@ -18,7 +18,7 @@ perguntas = [
 
 qtd_chaves = len(perguntas)
 n = 0
-contador = qtd_chaves - n
+contador = qtd_chaves
 i = 0
 
 while contador != 0:
@@ -44,7 +44,7 @@ while contador != 0:
 
     print("\n" "Resposta errada!" if resp_lista != perguntas[i]['Resposta'] else "\n" "Correto")
     i += 1
-    n += 1
+    contador -= 1
 else:
     print('Terminou')
 
