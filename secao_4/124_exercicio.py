@@ -16,15 +16,17 @@ perguntas = [
     }
 ]
 
-qtd_chaves = len(perguntas)
-n = 0
-contador = qtd_chaves
+qtd_dict = len(perguntas)
+repeticoes = qtd_dict
+contador = 0
 i = 0
+n = 0
 
-while contador != 0:
+while repeticoes != 0:
     lista_chaves = list(perguntas[i].keys())
     qtd_opcoes = len(perguntas[i]['Opções'])
     lista1 = list(perguntas[i]['Opções'])
+    opcoes = qtd_opcoes - qtd_opcoes
     
     print("\n",
         perguntas[i]['Pergunta'],'\n','\n',
@@ -39,13 +41,23 @@ while contador != 0:
     resp_lista = lista1[resp]
     
     
-    print(resp)
-    print(perguntas[i]['Resposta'])
+    #print(resp)
+    #print(perguntas[i]['Resposta'])
 
     print("\n" "Resposta errada!" if resp_lista != perguntas[i]['Resposta'] else "\n" "Correto")
+
+    contagem = contador + 1 
+    
+    contagem if resp_lista == perguntas[i]['Resposta'] else ...
+
     i += 1
-    contador -= 1
+    repeticoes -= 1
+
+    
+
+
 else:
+    print(f'Você acertou {contagem} de {len(perguntas)} questões')
     print('Terminou')
 
     """ lista_chaves = list(perguntas[1].keys())
