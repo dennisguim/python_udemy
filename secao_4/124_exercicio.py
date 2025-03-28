@@ -26,7 +26,7 @@ while repeticoes != 0:
     lista_chaves = list(perguntas[i].keys())
     qtd_opcoes = len(perguntas[i]['Opções'])
     lista1 = list(perguntas[i]['Opções'])
-    opcoes = qtd_opcoes - qtd_opcoes
+    
     
     print("\n",
         perguntas[i]['Pergunta'],'\n','\n',
@@ -58,7 +58,10 @@ while repeticoes != 0:
 
 else:
     print(f'Você acertou {contagem} de {len(perguntas)} questões')
-    print('Terminou')
+    if contagem < 2:
+        print('Você fracassou ❌')
+    else:
+        print('Você foi aprovado ✅')
 
     """ lista_chaves = list(perguntas[1].keys())
     qtd_opcoes = len(perguntas[1]['Opções'])
