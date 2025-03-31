@@ -27,20 +27,19 @@ lista_de_listas_de_inteiros = [
 ]
 
 def duplicado_1():
-    def volta():
-        for x in lista_de_listas_de_inteiros:
-            a = x
-            b = []
-            c = []
-            for i in a:
-                if i in b:
-                    c.append(i)
-                else:
-                    b.append(i)
-            if c == []:
-                c.append(-1)
-        return (a, c[0])
-    return volta
+    for x in lista_de_listas_de_inteiros:
+        a = x
+        b = []
+        c = []
+        for i in a:
+            if i in b:
+                c.append(i)
+            else:
+                b.append(i)
+        if c == []:
+            c.append(-1)
+        print(a, c[0])
+    return 'fim'
     
 print(duplicado_1())
 
