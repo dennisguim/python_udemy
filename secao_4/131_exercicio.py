@@ -26,21 +26,23 @@ lista_de_listas_de_inteiros = [
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
 ]
 
-def duplicado_1(lista_de_listas_de_inteiros):
-    for x in lista_de_listas_de_inteiros:
-        a = x
-        b = []
-        c = []
-        for i in a:
-            if i in b:
-                c.append(i)
-            else:
-                b.append(i)
-        if c == []:
-            c.append(-1)
-    return a, c[0]
+def duplicado_1():
+    def volta():
+        for x in lista_de_listas_de_inteiros:
+            a = x
+            b = []
+            c = []
+            for i in a:
+                if i in b:
+                    c.append(i)
+                else:
+                    b.append(i)
+            if c == []:
+                c.append(-1)
+        return (a, c[0])
+    return volta
     
-print(duplicado_1(lista_de_listas_de_inteiros))
+print(duplicado_1())
 
 # script para encontrar a primeira duplicada
 """ a = [10, 2, 2, 1, 3, 5, 10, 5, 10, 1]
