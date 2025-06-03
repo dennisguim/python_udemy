@@ -6,3 +6,4 @@ s1.discard('dennis')
 s1.discard(1)
 
 print(s1)
+
