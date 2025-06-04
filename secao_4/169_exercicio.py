@@ -11,8 +11,6 @@
 
 municipios = ['Salvador', 'Ubatuba', 'Belo Horizonte']
 estados = ['BA', 'SP', 'MG', 'RJ']
-municipio = []
-estado = []
 municipio_estado = []
 contador = len(municipios)
 i = 0
