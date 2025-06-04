@@ -25,3 +25,6 @@ while contador > 0:
         i += 1
 
 print(municipio_estado)
+
+# Resolvi sem usar o zip que é da próxima aula (tá na solução do professor). 
+# Mas consegui entregar um resultado sem pesquisar em lugar algum
