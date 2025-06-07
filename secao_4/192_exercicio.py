@@ -8,3 +8,34 @@
 # desfazer = [] -> Refazer ['caminhar', 'fazer café']
 # refazer = todo ['fazer café']
 # refazer = todo ['fazer café', 'caminhar']
+
+
+
+def adicionar(tarefa):
+    tarefas.append(tarefa)
+    return tarefas
+
+tarefas = []
+recall = ""
+while True:
+    
+    questionamento = input("Digite a tarefa ou desfazer ou refazer: ")
+    ...
+    if questionamento.lower() == "desfazer":
+        recall = tarefas.pop(-1)
+        print(*tarefas)
+
+    elif questionamento.lower() == "refazer":
+        tarefas.append(recall)
+        print(*tarefas)
+
+    elif questionamento.lower() != "desfazer" or questionamento.lower() != "refazer":
+        tarefas = adicionar(questionamento)
+        print(*tarefas)
+
+    elif questionamento.lower() == 'clear':
+        tarefas.clear()
+
+    elif questionamento.lower() == 'sair':
+        print(*tarefas)
+        break
