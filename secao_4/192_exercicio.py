@@ -21,21 +21,23 @@ while True:
     
     questionamento = input("Digite a tarefa ou desfazer ou refazer: ")
     ...
-    if questionamento.lower() == "desfazer":
-        recall = tarefas.pop(-1)
-        print(*tarefas)
+    if questionamento.lower() == 'sair':
+        print(*tarefas, sep='\n')
+        break
 
+    elif questionamento.lower() == "desfazer":
+        recall = tarefas.pop(-1)
+        print(*tarefas, sep='\n')
+        
     elif questionamento.lower() == "refazer":
         tarefas.append(recall)
-        print(*tarefas)
+        print(*tarefas, sep='\n')
 
     elif questionamento.lower() != "desfazer" or questionamento.lower() != "refazer":
         tarefas = adicionar(questionamento)
-        print(*tarefas)
+        print(*tarefas, sep='\n')
 
     elif questionamento.lower() == 'clear':
         tarefas.clear()
 
-    elif questionamento.lower() == 'sair':
-        print(*tarefas)
-        break
+
